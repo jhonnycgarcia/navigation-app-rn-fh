@@ -1,9 +1,9 @@
 import { Text, useWindowDimensions, View } from 'react-native';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList, type DrawerContentComponentProps } from '@react-navigation/drawer';
 
-import { StackNavigator } from './StackNavigator';
 import { ProfileScreen } from '../screens';
 import { globalColors } from '../theme/theme';
+import { BottomTabsNavigator } from './BottomTabsNavigator';
 
 
 const Drawer = createDrawerNavigator();
@@ -27,7 +27,7 @@ export const SideMenuNavigator = () => {
                 },
             }}
         >
-          <Drawer.Screen name="StackNavigator" component={StackNavigator} />
+          <Drawer.Screen name="Tabs" component={BottomTabsNavigator} />
           <Drawer.Screen name="Profile" component={ProfileScreen} />
         </Drawer.Navigator>
       );

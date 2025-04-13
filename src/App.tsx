@@ -6,6 +6,7 @@ export function App() {
   return (
     <NavigationContainer>
       <SideMenuNavigator />
+      {/* <BottomTabsNavigator /> */}
     </NavigationContainer>
   );
 }

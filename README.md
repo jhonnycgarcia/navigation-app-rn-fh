@@ -102,3 +102,4 @@ To learn more about React Native, take a look at the following resources:
 - `npm install @react-navigation/stack`
 - `https://reactnavigation.org/docs/drawer-navigator/`
 - `npm react-native start --reset-cache`
+- `https://reactnavigation.org/docs/bottom-tab-navigator/`
