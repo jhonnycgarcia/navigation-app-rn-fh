@@ -99,3 +99,4 @@ To learn more about React Native, take a look at the following resources:
 # Enlaces y materiales adjuntos
 - `https://reactnavigation.org/docs/stack-navigator/`
 - `https://reactnavigation.org/docs/getting-started/`
+- `npm install @react-navigation/stack`
