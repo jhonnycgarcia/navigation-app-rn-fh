@@ -1,10 +1,11 @@
-import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { Text } from 'react-native';
 
 export function App() {
   return (
-    <View>
+    <NavigationContainer>
       <Text>Hello World</Text>
-    </View>
+    </NavigationContainer>
   );
 }
 
