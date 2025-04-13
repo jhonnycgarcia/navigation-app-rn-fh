@@ -1,7 +1,8 @@
 import { View, Text, FlatList } from 'react-native';
 import { globalStyles } from '../../theme/theme';
 import { PrimaryButton } from '../../components';
-import { useNavigation } from '@react-navigation/native';
+import { type NavigationProp, useNavigation } from '@react-navigation/native';
+import { type RootStackParamList } from '../../routes/StackNavigator';
 
 const products = [
   { id: 1, name: 'Product 1', price: 100 },
@@ -13,7 +14,7 @@ const products = [
 ];
 
 export const ProductsScreen = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   return (
     <View style={globalStyles.container}>
       <Text style={{ marginBottom: 10, fontSize: 30 }}>Products</Text>
@@ -23,7 +24,7 @@ export const ProductsScreen = () => {
           ({ item }) =>
             <PrimaryButton
               label={item.name}
-              onPress={() => navigation.navigate('Product' as never)}
+              onPress={() => navigation.navigate('Product', { id: item.id, name: item.name })}
             />
         }
       />
@@ -31,7 +32,7 @@ export const ProductsScreen = () => {
       <Text style={{ marginBottom: 10, fontSize: 30 }}>Ajustes</Text>
       <PrimaryButton
         label="Go to Setting"
-        onPress={() => navigation.navigate('Setting' as never)}
+        onPress={() => navigation.navigate('Setting')}
       />
     </View>
   );

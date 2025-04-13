@@ -1,7 +1,14 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { HomeScreen, ProductScreen, ProductsScreen, SettingScreen } from '../screens';
 
-const Stack = createStackNavigator();
+export type RootStackParamList = {
+    Home: undefined;
+    Products: undefined;
+    Product: { id: number; name: string };
+    Setting: undefined;
+};
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 export const StackNavigator = () => {
   return (
